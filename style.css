@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Host Grotesk", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: aliceblue;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 15px;
+  border-radius: 10px;
+  gap: 10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  width: 800px;
+  background-color: white;
+}
+
+.card-details {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.card-details h2 {
+  font-size: 45px;
+  margin-bottom: 20px;
+}
+
+.card-details p {
+  color: #696969;
+}
+
+.card-category {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card-category .category {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #f7f9fa;
+  border: 1px solid lightblue;
+  border-radius: 7px;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card-category .category:hover {
+  background-color: #eaedee;
+}
+
+.card-category .category .title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.card-category .category .title span {
+  width: 6px;
+  height: 6px;
+  background-color: gray;
+  border-radius: 50%;
+}
+
+.card-category .category .title small {
+  color: #696969;
+}
+
+.card-category .category .title h3 {
+  color: #1e90ff;
+}
+
+.card-category .category .content {
+  display: flex;
+  align-items: center;
+}
+
+.card-category .category .content a {
+  text-decoration: none;
+  color: #1e90ff;
+}
+
+.card-category .category .content a i {
+  font-size: 25px;
+  transform: rotate(-45deg);
+}
+
+.circle {
+  position: relative;
+  margin-top: 30px;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(#1e90ff, #ffffff);
+  border-radius: 50%;
+}
+
+.circle span {
+  position: absolute;
+  top: 50%;
+  right: -60px;
+  font-weight: 700;
+  transform: translateY(-50%);
+  white-space: nowrap;
+  display: block;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 500px;
+    grid-template-columns: 1fr;
+  }
+}
